@@ -194,7 +194,8 @@
                                         <button class="btn btn-sm btn-primary m-t-n-xs">
                                             <strong>查看详情</strong>
                                         </button>
-                                        <button class="btn btn-sm btn-warning m-t-n-xs">
+                                        <button class="btn btn-sm btn-warning m-t-n-xs" 
+                                        data-toggle="modal" data-target="#myModal">
                                             <strong>修改</strong>
                                         </button>
                                     </td>
@@ -206,6 +207,32 @@
             </div>
             <!-- 页面主内容完 -->
         </div>
+    </div>
+    <!-- 修改弹窗 -->
+    <div class="modal inmodal" id="myModal" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content animated bounceInRight">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">关闭</span>
+                    </button>
+                    <i class="fa fa-laptop modal-icon"></i>
+                    <h4 class="modal-title">修改员工基本薪资</h4>
+                </div><small class="font-bold">
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>基本薪资</label> 
+                    <input type="email" placeholder="基本薪资" class="form-control">
+                </div>
+                
+                
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-white" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary">保存</button>
+            </div>
+        </small></div><small class="font-bold">
+        </small></div><small class="font-bold">
+        </small>
     </div>
     <!-- Mainly scripts -->
     <script src="js/jquery-2.1.1.min.js"></script>
