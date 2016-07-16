@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+
+    <title>考勤管理</title>
+
+    <link href="css/bootstrap.min.css?v=3.4.0" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css?v=4.3.0" rel="stylesheet">
+
+    <!-- Morris -->
+    <link href="css/plugins/morris/morris-0.4.3.min.css" rel="stylesheet">
+
+    <!-- Gritter -->
+    <link href="js/plugins/gritter/jquery.gritter.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css?v=2.2.0" rel="stylesheet">
+    <!-- switch -->
+    <link href="css/plugins/switchery/switchery.css" rel="stylesheet">
+</head>
+
+<body>
+    
+    <div id="wrapper">
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="side-menu">
+                    <li class="nav-header">
+
+                        <div class="dropdown profile-element"> <span>
+                            <img alt="image" class="img-circle" src="img/profile_small.jpg" />
+                             </span>
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
+                                <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">Beaut-zihan</strong>
+                             </span> <span class="text-muted text-xs block">部门经理 <b class="caret"></b></span> </span>
+                            </a>
+                            <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                                <li><a href="form_avatar.html">修改头像</a>
+                                </li>
+                                <li><a href="profile.html">个人资料</a>
+                                </li>
+                                <li><a href="contacts.html">联系我们</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li><a href="login.html">安全退出</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="logo-element">
+                            H+
+                        </div>
+
+                    </li>
+                    <li>
+                        <a href="index.html"><i class="fa fa-th-large"></i> <span class="nav-label">员工管理</span></a>
+                
+                    </li>
+                    <li class="active">
+                        <a href="attendManage.html"><i class="fa fa-columns"></i> <span class="nav-label">考勤管理</span></a>
+                    </li>
+                    <li>
+                        <a href="index.html#"><i class="fa fa fa-globe"></i> <span class="nav-label">请假管理</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="leaveApply.html">请假申请</a>
+                            </li>
+                            <li><a href="checkStatus.html">审核状态</a>
+                            </li>
+                            <li><a href="checkLeave.html">请假核实</a>
+                            </li>
+                            <li><a href="leaveJudge.html">请假审批</a>
+                            </li>
+                            
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="index.html#"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">加班管理</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="moreJobApply.html">加班申请</a>
+                            </li>
+                            <li><a href="moreJobStatus.html">审核状态</a>
+                            </li>
+                            <li><a href="moreJobCheck.html">加班核实</a>
+                            </li>
+                            <li><a href="moreJobJudge.html">加班审批</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="salaryManage.html"><i class="fa fa-envelope"></i> <span class="nav-label">薪资管理</span></a>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="apartmentManage.html"><i class="fa fa-edit"></i> <span class="nav-label">部门管理</span></a>
+                    </li>
+                    <li>
+                        <a href="jobLevel.html"><i class="fa fa-desktop"></i> <span class="nav-label">职称管理</span></a>
+                    </li>
+                    
+                </ul>
+
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="gray-bg dashbard-1">
+            <div class="row border-bottom">
+                <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                    <div class="navbar-header">
+                        <a class="navbar-minimalize minimalize-styl-2 btn btn-primary "><i class="fa fa-bars"></i> </a>
+                    </div>
+                    <ul class="nav navbar-top-links navbar-right">
+                        <li>
+                            <span class="m-r-sm text-muted welcome-message"><a href="index.html" title="返回首页"><i class="fa fa-home"></i></a>欢迎使用人事管理系统</span>
+                        </li>
+                        
+                        <li>
+                            <a href="login.html">
+                                <i class="fa fa-sign-out"></i> 退出
+                            </a>
+                        </li>
+                    </ul>
+
+                </nav>
+            </div>
+
+            <!-- 页面的标题 -->
+            <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-lg-10">
+                    <h2>考勤管理</h2>
+
+                </div>
+                <div class="col-lg-2">
+
+                </div>
+            </div>
+            <!-- 页面标题完 -->
+            <!-- 页面主内容 -->
+            <div class="wrapper wrapper-content animated fadeInRight">
+                <div class="row">
+                    <div class="input-group col-md-4 pull-left">
+                        <input type="text" class="form-control"> 
+                        <span class="input-group-btn"> 
+                            <button type="button" class="btn btn-primary">搜索
+                            </button> 
+                        </span>
+                    </div>
+                    
+                </div>
+
+                <div class="row">
+                    <!-- 选择时间 -->
+                    <div class="form-group col-md-4 pull-left" id="data_1">
+                        <label class="font-noraml">请选择时间</label>
+                        <div class="input-group date">
+                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                            <input type="text" class="form-control" value="2016-7-14">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>员工编号</th>
+                                    <th>姓名</th>
+                                    <th>部门</th>
+                                    <th>职称</th>
+                                    <th>签到时间</th>
+                                    <th>签退时间</th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>060201</td>
+                                    <td>马云</td>
+                                    <td>人事部</td>
+                                    <td>部门经理</td>
+                                    <td>8:00</td>
+                                    <td>18:00</td>
+                                    <td>
+                                        <button class="btn btn-sm btn-primary m-t-n-xs">
+                                            <strong>查看个人考勤统计</strong>
+                                        </button>
+                                        
+                                    </td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                </div>
+            </div>
+            <!-- 页面主内容完 -->
+        </div>
+    </div>
+    <!-- Mainly scripts -->
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js?v=3.4.0"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="js/hplus.js?v=2.2.0"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+    <!-- Data picker -->
+    <script src="js/plugins/datapicker/bootstrap-datepicker.js"></script>
+    <!-- date -->
+    <!-- Switchery -->
+    <script src="js/plugins/switchery/switchery.js"></script>
+    <script src="js/dateSupport.js"></script>
+</body>
+
+</html>
