@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit">
 
-    <title>审核状态</title>
+    <title>加班核实</title>
 
     <link href="css/bootstrap.min.css?v=3.4.0" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.css?v=4.3.0" rel="stylesheet">
@@ -20,31 +20,6 @@
 
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/style.css?v=2.2.0" rel="stylesheet">
-
-    <link href="css/bootstrap.min.css?v=3.4.0" rel="stylesheet">
-    <link href="font-awesome/css/font-awesome.css?v=4.3.0" rel="stylesheet">
-
-    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
-
-    <link href="css/plugins/chosen/chosen.css" rel="stylesheet">
-
-    <link href="css/plugins/switchery/switchery.css" rel="stylesheet">
-
-    <link href="css/plugins/jasny/jasny-bootstrap.min.css" rel="stylesheet">
-
-    <link href="css/plugins/nouslider/jquery.nouislider.css" rel="stylesheet">
-
-    <link href="css/plugins/datapicker/datepicker3.css" rel="stylesheet">
-
-    <link href="css/plugins/ionRangeSlider/ion.rangeSlider.css" rel="stylesheet">
-    <link href="css/plugins/ionRangeSlider/ion.rangeSlider.skinFlat.css" rel="stylesheet">
-
-    <link href="css/plugins/colorpicker/css/bootstrap-colorpicker.min.css" rel="stylesheet">
-
-    <link href="css/animate.css" rel="stylesheet">
-    <link href="css/style.css?v=2.2.0" rel="stylesheet">
-
-
 
 </head>
 
@@ -124,7 +99,8 @@
                     </li>
                     <li>
                         <a href="jobLevel.html"><i class="fa fa-desktop"></i> <span class="nav-label">职称管理</span></a>
-                    </li>                    
+                    </li>
+                    
                 </ul>
 
             </div>
@@ -154,7 +130,7 @@
             <!-- 页面的标题 -->
             <div class="row wrapper border-bottom white-bg page-heading">
                 <div class="col-lg-10">
-                    <h2>审核状态</h2>
+                    <h2>加班核实</h2>
 
                 </div>
                 <div class="col-lg-2">
@@ -164,61 +140,91 @@
             <!-- 页面标题完 -->
             <!-- 页面主内容 -->
             <div class="wrapper wrapper-content animated fadeInRight">
-                <div class="ibox-content">
-                        <form method="get" class="form-horizontal">
-                                <div class="form-group">
-                                        <label class="col-sm-4 control-label"><h4>姓名</h4></label>
-                                        <label class="col-sm-1 control-label"><h4>张三</h4></label>
-                                </div>
-                                <div class="form-group">
-                                        <label class="col-sm-4 control-label"><h4>员工编号</h4></label>
-                                        <label class="col-sm-1 control-label"><h4>0101101</h4></label>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-sm-4 control-label"><h4>审批状态</h4></label>
-                                    <label class="col-sm-1 control-label"><h4>通过</h4></label>
-                                </div>
+                <div class="row">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>员工编号</th>
+                                    <th>姓名</th>
+                                    <th>加班开始时间</th>
+                                    <th>加班结束时间</th>
+                                    <th>审核状态</th>
+                                    <th>审核人</th>
+                                    <th>审核时间</th>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>060201</td>
+                                    <td>马云</td>
+                                    <td>2014-2-1</td>
+                                    <td>2014-2-5</td>
+                                    <td>通过</td>
+                                    <td>张三</td>
+                                    <td>2014-1-20</td>
+                                    <td>
+                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                                        查看详情
+                                        </button>
+                                        
+                                    </td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                </div>
+            </div>
 
-                               <div class="form-group">
-                                    <label class="col-sm-4 control-label"><h4>审批时间</h4></label>
-                                    <label class="col-sm-1 control-label"><h4>20140110</h4></label>
-                                </div>
-                                <form method="get" class="form-horizontal">
+
+           
+
+              <div class="modal inmodal" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content animated bounceInRight">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">关闭</span>
+                                                </button>
+                                                <i class="fa fa-laptop modal-icon"></i>
+                                                <h4 class="modal-title">加班核实</h4>
+                                            </div>
+                                    <div class="ibox-content">
+                                        <form method="get" class="form-horizontal">
                                             <div class="form-group">
-                                                <label class="col-sm-4 control-label"><h4>审核意见</h4></label>
+                                                <label class="col-sm-2 control-label"><h3>加班理由</h3></label>
 
                                                
                                         <div class="row m-t-lg">
-                                            <div class="col-lg-7">
-                                                <pre id="toastrOptions" class="p-m">由于个人身体状况予以同意请假
+                                            <div class="col-lg-12">
+                                                <pre id="toastrOptions" class="p-m">因部分项目工作未完成需要加班
                                                 </pre>
                                             </div>
                                         </div>
                                             </div>
                                         </form> 
-                    
+                                   
+                                        <form method="get" class="form-horizontal">
+                                            <div class="form-group">
+                                                <label class="col-sm-2 control-label"><h3>审核意见</h3></label>
 
-
-
-
-                                 
-                               
-
-                                        
-                            
-
-
-
-                                            
-                        </form>    
+                                               
+                                        <div class="row m-t-lg">
+                                            <div class="col-lg-12">
+                                                <pre id="toastrOptions" class="p-m">由于项目进度状况予以同意加班
+                                                </pre>
+                                            </div>
+                                        </div>
+                                            </div>
+                                        </form> 
+                                    </div>
+                                    <div class="modal-footer">
+                                            <button type="button" class="btn btn-white" data-dismiss="modal">关闭</button>
+                                          
+                                        </div>
                 </div>
-            </div>
-            
-    
-
-
-            <!-- 页面主内容完 -->
         </div>
+
     </div>
     <!-- Mainly scripts -->
     <script src="js/jquery-2.1.1.min.js"></script>
@@ -229,46 +235,6 @@
     <!-- Custom and plugin javascript -->
     <script src="js/hplus.js?v=2.2.0"></script>
     <script src="js/plugins/pace/pace.min.js"></script>
-
-   
-    <!-- Chosen -->
-    <script src="js/plugins/chosen/chosen.jquery.js"></script>
-
-    <!-- JSKnob -->
-    <script src="js/plugins/jsKnob/jquery.knob.js"></script>
-
-    <!-- Input Mask-->
-    <script src="js/plugins/jasny/jasny-bootstrap.min.js"></script>
-
-    <!-- Data picker -->
-    <script src="js/plugins/datapicker/bootstrap-datepicker.js"></script>
-
-    <!-- NouSlider -->
-    <script src="js/plugins/nouslider/jquery.nouislider.min.js"></script>
-
-    <!-- Switchery -->
-    <script src="js/plugins/switchery/switchery.js"></script>
-
-    <!-- IonRangeSlider -->
-    <script src="js/plugins/ionRangeSlider/ion.rangeSlider.min.js"></script>
-
-    <!-- iCheck -->
-    <script src="js/plugins/iCheck/icheck.min.js"></script>
-
-    <!-- MENU -->
-    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
-    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
-
-    <!-- COLORPICKER -->
-    <script src="js/plugins/colorpicker/bootstrap-colorpicker.min.js"></script>
-
-
-    
-
-
-
-
-
 
 
 </body>

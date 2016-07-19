@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+
+    <title>部门管理</title>
+
+    <link href="css/bootstrap.min.css?v=3.4.0" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css?v=4.3.0" rel="stylesheet">
+
+    <!-- Morris -->
+    <link href="css/plugins/morris/morris-0.4.3.min.css" rel="stylesheet">
+
+    <!-- Gritter -->
+    <link href="js/plugins/gritter/jquery.gritter.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css?v=2.2.0" rel="stylesheet">
+
+</head>
+
+<body>
+    
+    <div id="wrapper">
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="side-menu">
+                    <li class="nav-header">
+
+                        <div class="dropdown profile-element"> <span>
+                            <img alt="image" class="img-circle" src="img/profile_small.jpg" />
+                             </span>
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
+                                <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">Beaut-zihan</strong>
+                             </span> <span class="text-muted text-xs block">部门经理 <b class="caret"></b></span> </span>
+                            </a>
+                            <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                                <li><a href="form_avatar.html">修改头像</a>
+                                </li>
+                                <li><a href="profile.html">个人资料</a>
+                                </li>
+                                <li><a href="contacts.html">联系我们</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li><a href="login.html">安全退出</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="logo-element">
+                            H+
+                        </div>
+
+                    </li>
+                    <li>
+                        <a href="index.html"><i class="fa fa-th-large"></i> <span class="nav-label">员工管理</span></a>
+                
+                    </li>
+                    <li >
+                        <a href="attendManage.html"><i class="fa fa-columns"></i> <span class="nav-label">考勤管理</span></a>
+                    </li>
+                    <li>
+                        <a href="index.html#"><i class="fa fa fa-globe"></i> <span class="nav-label">请假管理</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="leaveApply.html">请假申请</a>
+                            </li>
+                            <li><a href="checkStatus.html">审核状态</a>
+                            </li>
+                            <li><a href="checkLeave.html">请假核实</a>
+                            </li>
+                            <li><a href="leaveJudge.html">请假审批</a>
+                            </li>
+                            
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="index.html#"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">加班管理</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="moreJobApply.html">加班申请</a>
+                            </li>
+                            <li><a href="moreJobStatus.html">审核状态</a>
+                            </li>
+                            <li><a href="moreJobCheck.html">加班核实</a>
+                            </li>
+                            <li><a href="moreJobJudge.html">加班审批</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="salaryManage.html"><i class="fa fa-envelope"></i> <span class="nav-label">薪资管理</span></a>
+                        
+                    </li>
+                    
+                    <li class="active">
+                       <a> <i class="fa fa-edit"></i> <span class="nav-label">部门管理</span></a>
+                    </li>
+                    <li>
+                        <a href="jobLevel.html"><i class="fa fa-desktop"></i> <span class="nav-label">职称管理</span></a>
+                    </li>
+                    
+                </ul>
+
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="gray-bg dashbard-1">
+            <div class="row border-bottom">
+                <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                    <div class="navbar-header">
+                        <a class="navbar-minimalize minimalize-styl-2 btn btn-primary "><i class="fa fa-bars"></i> </a>
+                    </div>
+                    <ul class="nav navbar-top-links navbar-right">
+                        <li>
+                            <span class="m-r-sm text-muted welcome-message"><a href="index.html" title="返回首页"><i class="fa fa-home"></i></a>欢迎使用人事管理系统</span>
+                        </li>
+                        
+                        <li>
+                            <a href="login.html">
+                                <i class="fa fa-sign-out"></i> 退出
+                            </a>
+                        </li>
+                    </ul>
+
+                </nav>
+            </div>
+
+            <!-- 页面的标题 -->
+            <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-lg-10">
+                    <h2>部门管理</h2>
+
+                </div>
+                <div class="col-lg-2">
+
+                </div>
+            </div>
+            <!-- 页面标题完 -->
+            <!-- 页面主内容 -->
+            <div class="wrapper wrapper-content animated fadeInRight">
+                <div class="row">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>部门编号</th>
+                                    <th>部门名称</th>
+                                    <th>负责人</th>
+                                    <th>人数</th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>01</td>
+                                    <td>人事部</td>
+                                    <td>马云</td>
+                                    <td>6</td>
+                                    <td>
+                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                                        修改
+                                        </button>
+                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal6">
+                                        删除
+                                        </button>
+                                    </td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                </div>
+            </div>
+            <div class="modal inmodal fade" id="myModal6" tabindex="-1" role="dialog"  aria-hidden="true">
+                                <div class="modal-dialog modal-sm">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                            <h4 class="modal-title">确认删除</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>删除后将不可恢复，是否确认删除？</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-white" data-dismiss="modal">关闭</button>
+                                            <button type="button" class="btn btn-primary" data-dismiss="modal">确定
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+            </div>
+            <div class="modal inmodal" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content animated bounceInRight">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">关闭</span>
+                                                </button>
+                                                <i class="fa fa-laptop modal-icon"></i>
+                                                <h4 class="modal-title">部门管理</h4>
+                                                <small class="font-bold">请在下列文本框中输入要修改的内容并点击保存
+                                            </div>
+                                    <div class="ibox-content">
+                                        <form method="get" class="form-horizontal">
+                                            <div class="form-group">
+                                                <label class="col-sm-2 control-label"><h4>部门编号</h4></label>
+
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-sm-2 control-label"><h4>部门名称</h4></label>
+
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-sm-2 control-label"><h4>负责人</h4></label>
+
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div> 
+                                            <div class="form-group">
+                                                <label class="col-sm-2 control-label"><h4>人数</h4></label>
+
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div>        
+                                        </form> 
+                                    </div>
+                                    <div class="modal-footer">
+                                            <button type="button" class="btn btn-white" data-dismiss="modal">关闭</button>
+                                            <button type="button" class="btn btn-primary" data-dismiss="modal">保存</button>
+                                        </div>
+                                    </div>
+            </div>
+
+
+
+
+            <!-- 页面主内容完 -->
+        </div>
+    </div>
+    <!-- Mainly scripts -->
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js?v=3.4.0"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="js/hplus.js?v=2.2.0"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+
+
+</body>
+
+</html>
